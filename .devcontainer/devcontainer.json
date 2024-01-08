@@ -10,6 +10,13 @@
 			"version": "none",
 			"installMaven": "false",
 			"installGradle": "false"
+		},
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {
+			"moby": true,
+			"azureDnsAutoDetection": true,
+			"installDockerBuildx": true,
+			"version": "latest",
+			"dockerDashComposeVersion": "v2"
 		}
 	}
 

@@ -99,11 +99,11 @@
 							<jmxPort>9003</jmxPort>
 						</configuration>
 					</execution>
-					<!-- <execution>
+					<execution>
                     	<goals>
                         	<goal>build-image-no-fork</goal>
                     	</goals>
-                	</execution> -->
+                	</execution>
 				</executions>
         	</plugin>
 			<plugin>
