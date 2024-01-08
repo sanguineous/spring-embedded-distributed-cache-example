@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 public class GreetingService {
     private static final String template = "Hello, %s!";
 
-    @Cacheable("greeting")
+    @Cacheable(value = "greeting", key = "#name")
     public String cachedGgreeting(Integer delay, String name){
         try {
             Thread.sleep(delay);
