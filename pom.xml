@@ -60,7 +60,6 @@
 					<execution>
 						<id>start-instance-1</id>
 						<goals>
-							<goal>stop</goal>
 							<goal>start</goal>
 						</goals>
 						<configuration>
@@ -73,7 +72,6 @@
 					<execution>
 						<id>start-instance-2</id>
 						<goals>
-							<goal>stop</goal>
 							<goal>start</goal>
 						</goals>
 						<configuration>

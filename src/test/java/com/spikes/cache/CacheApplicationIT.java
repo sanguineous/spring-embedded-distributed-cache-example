@@ -15,18 +15,17 @@ class CacheApplicationIT {
     @Test
     public void testDistributedCaching() {
 		String currentTime = String.valueOf(new Date().getTime());
-		String requestUri = "http://localhost:8080/cachedGreeting?delay=1000&name=" + currentTime;
 		String expectedResponse = String.format("Hello, %s!", currentTime);
 
 		when().
-            get(requestUri).
+            get("http://localhost:8080/cachedGreeting?delay=1000&name=" + currentTime).
     	then().
             statusCode(200).
 			assertThat().
 				body(equalTo(expectedResponse));
 
 		when().
-            get(requestUri).
+            get("http://localhost:8081/cachedGreeting?delay=1000&name=" + currentTime).
     	then().
             statusCode(200).
 			time(lessThan(1L), TimeUnit.SECONDS)
